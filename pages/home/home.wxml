@@ -2,3 +2,7 @@
 <text>pages/home/home.wxml</text>
 <view class="title">Hollow World</view>
 <button size="mini">按钮</button>
+
+
+<view>知识点2</view>
+<view>呵呵呵</view>
