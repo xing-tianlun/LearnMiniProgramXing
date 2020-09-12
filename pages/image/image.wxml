@@ -1,0 +1,35 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+  1.image组件可以写成单标签，也可以写成双标签
+  2.iamge组件有自己的默认的大小：320*240
+  3.iamge组件是一个行内块元素
+ -->
+
+<!-- <image/> -->
+
+<!-- 2.src: 本地路径(相对路径/绝对路径)/远程地址 -->
+<image src="../../assets/tabbar/cart_active.png"/>
+<image src="/assets/tabbar/cart_active.png"/>
+
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+<!-- 补充：相册中的图片 -->
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src="{{imagePath}}"/>
+
+<!-- 3.bindload: 监听图片加载完成 -->
+<!-- lazy-load: 图片的懒加载 -->
+<view>----------------------------------------</view>
+<image wx:for="{{10}}" wx:key="item"
+      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+      bindload="handleImageLoad"
+      lazy-load/>
+
+<!-- 4.show-menu-by-longpress：长按图片识别小程序码 -->
+<image show-menu-by-longpress
+        src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+
+
