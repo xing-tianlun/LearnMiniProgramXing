@@ -1,0 +1,43 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1.设置样式的三种方式 -->
+<!-- 1.1 行内(内联)样式 -->
+<view style="color: red; font-size: 32px">哈哈哈</view>
+
+<!-- 1.2 页内样式 -->
+<view class="box">呵呵呵</view>
+
+<!-- 1.3 全局样式 -->
+<view class="container">嘿嘿嘿</view>
+
+<!-- 2. 三种样式作用于同一个组件 -->
+<!-- 行内样式 > 页内样式 > 全局样式 -->
+<view style="background: red;" class="content">嘻嘻嘻</view>
+
+<!-- 3. wxss中的单位：rpx -->
+<!-- 前端也需要进行配置尺寸的适配: em/rem/vw/wh -->
+<view class="box1"></view>
+<view class="box2"></view>
+
+<view class="content1">哈哈哈</view>
+<view class="content2">呵呵呵</view>
+
+<button class="btn">按钮</button>
+
+<!-- 4. 使用官方样式库制作搜索框 -->
+<view class="page__bd">
+	<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+		<form class="weui-search-bar__form">
+			<view class="weui-search-bar__box">
+				<i class="weui-icon-search"></i>
+				<input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+				<span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+			</view>
+			<label class="weui-search-bar__label" bindtap="showInput">
+				<i class="weui-icon-search"></i>
+				<span class="weui-search-bar__text">搜索</span>
+			</label>
+		</form>
+		<view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+	</view>
+</view>
+
