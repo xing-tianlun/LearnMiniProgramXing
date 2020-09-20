@@ -1,4 +1,18 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<view class="title">Hollow World</view>
+<text class="title">Hollow World</text>
 <button size="mini">按钮</button>
+
+<!-- 1.Toast -->
+<button size="mini" bind:tap="handleShowToast">showToast</button>
+
+<!-- 2.Modal -->
+<button size="mini" bind:tap="handleShowModal">showModal</button>
+
+<!-- 3.Loading -->
+<button size="mini" bind:tap="handleShowLoading">showLoading</button>
+
+<!-- 4.actionSheet -->
+<button size="mini" bind:tap="handleShowActive">showActive</button>
+
+<!-- 5.分享按钮 -->
+<button size="mini" open-type="share">分享</button>
