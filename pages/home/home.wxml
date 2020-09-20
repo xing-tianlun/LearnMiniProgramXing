@@ -1,4 +1,3 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<view class="title">Hollow World</view>
-<button size="mini">按钮</button>
+<text class='title'>Hello World</text>
+<button size='mini'>按钮</button>
