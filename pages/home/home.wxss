@@ -1,5 +1,14 @@
 /* pages/home/home.wxss */
 .title {
-  color: #f00;
-  font-size: 30px;
+  color: red;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
 }
